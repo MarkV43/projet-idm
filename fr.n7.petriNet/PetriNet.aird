@@ -4,7 +4,7 @@
     <semanticResources>PetriNet.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_Zb3KsLRKEe2f9dM9j5U6aw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Z4kU0LRKEe2f9dM9j5U6aw" name="petrinet class diagram" repPath="#_Z4gqcLRKEe2f9dM9j5U6aw" changeId="13d0a9f4-2771-4d88-ad3b-a884ea9ee19c">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Z4kU0LRKEe2f9dM9j5U6aw" name="petrinet class diagram" repPath="#_Z4gqcLRKEe2f9dM9j5U6aw" changeId="4738b693-539c-4ad3-8ef1-2bc5def67610">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="PetriNet.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -25,6 +25,10 @@
         <children xmi:type="notation:Node" xmi:id="_jOe7ULRKEe2f9dM9j5U6aw" type="2003" element="_jOcfELRKEe2f9dM9j5U6aw">
           <children xmi:type="notation:Node" xmi:id="_jOe7U7RKEe2f9dM9j5U6aw" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_jOe7VLRKEe2f9dM9j5U6aw" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_bRPMkLbqEe23vfTfvIC-Zw" type="3010" element="_bRBxMLbqEe23vfTfvIC-Zw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_bRPMkbbqEe23vfTfvIC-Zw" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_bRPMkrbqEe23vfTfvIC-Zw"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_jOe7VbRKEe2f9dM9j5U6aw"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_jOe7VrRKEe2f9dM9j5U6aw"/>
           </children>
@@ -228,10 +232,18 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_jOdGILRKEe2f9dM9j5U6aw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_dUsSEbbqEe23vfTfvIC-Zw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_bRBxMLbqEe23vfTfvIC-Zw" name="name : EString" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="PetriNet.ecore#//Network/name"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="PetriNet.ecore#//Network/name"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_dUs5JbbqEe23vfTfvIC-Zw" labelAlignment="LEFT" description="_4WnLqbRKEe2f9dM9j5U6aw">
+          <labelFormat>bold</labelFormat>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_kbIUoLRKEe2f9dM9j5U6aw" name="Element" tooltipText="" outgoingEdges="_FJ310LaHEe2f9dM9j5U6aw _POVkZraHEe2f9dM9j5U6aw" incomingEdges="_zfCYsLRKEe2f9dM9j5U6aw _0B3Y9rRKEe2f9dM9j5U6aw _czweI7RLEe2f9dM9j5U6aw" width="12" height="10">
       <target xmi:type="ecore:EClass" href="PetriNet.ecore#//Element"/>
