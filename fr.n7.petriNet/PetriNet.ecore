@@ -27,4 +27,5 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="predecessor" lowerBound="1"
         eType="#//Element" eOpposite="#//Element/outgoing"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReadArc" eSuperTypes="#//Arc"/>
 </ecore:EPackage>

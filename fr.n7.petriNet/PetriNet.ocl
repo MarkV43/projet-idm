@@ -1,0 +1,36 @@
+import 'PetriNet.ecore'
+
+package petrinet
+
+context Network
+inv warningSeverity: true
+inv withMessage('Explicit message in network (withMessage)'): true
+-- inv errorSeverity: null
+
+context Element
+def: network(): Network =
+	Network.allInstances()
+		->select(p | p.elements->includes(self))
+		->asSequence()->first()
+		
+context Place
+inv nonNullName('The \'name\' property of "' + self.toString() + '" is null'):
+	self.name <> null
+
+context Place
+inv positiveTokens('The number of tokens must be positive'):
+	self.tokens >= 0
+	
+context Arc
+inv nonNegativeWeight('An Arcs weight must be always non-negative: ' + self.weight.toString()):
+	self.weight > 0	
+
+context Arc
+inv correctConnection('An Arc must not connect an element to another of the same type'):
+	self.predecessor.oclIsKindOf(Place) xor self.successor.oclIsKindOf(Place)
+
+context ReadArc
+inv placeToTransition('A ReadArc must always be from a Place to a Transition'):
+	self.predecessor.oclIsKindOf(Place) and self.successor.oclIsKindOf(Transition)
+		
+endpackage
