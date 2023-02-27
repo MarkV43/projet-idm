@@ -9,20 +9,24 @@
   <processElements
       xsi:type="simplepdl:WorkDefinition"
       linksToSuccessors="//@processElements.4 //@processElements.5 //@processElements.7 //@processElements.8"
-      name="Conception"/>
+      name="Conception"
+      resourcesUtilised="//@processElements.14 //@processElements.15"/>
   <processElements
       xsi:type="simplepdl:WorkDefinition"
       linksToPredecessors="//@processElements.5"
       linksToSuccessors="//@processElements.6"
-      name="Développement"/>
+      name="Développement"
+      resourcesUtilised="//@processElements.18 //@processElements.19"/>
   <processElements
       xsi:type="simplepdl:WorkDefinition"
       linksToPredecessors="//@processElements.4 //@processElements.6"
-      name="RédactionTests"/>
+      name="RédactionTests"
+      resourcesUtilised="//@processElements.20 //@processElements.21"/>
   <processElements
       xsi:type="simplepdl:WorkDefinition"
       linksToPredecessors="//@processElements.7 //@processElements.8"
-      name="RédactionDoc"/>
+      name="RédactionDoc"
+      resourcesUtilised="//@processElements.16 //@processElements.17"/>
   <processElements
       xsi:type="simplepdl:WorkSequence"
       predecessor="//@processElements.0"
@@ -46,4 +50,69 @@
       linkType="finishToFinish"
       predecessor="//@processElements.0"
       successor="//@processElements.3"/>
+  <processElements
+      xsi:type="simplepdl:Resource"
+      amount="3"
+      utilisations="//@processElements.14"
+      name="Concepteur"/>
+  <processElements
+      xsi:type="simplepdl:Resource"
+      amount="2"
+      utilisations="//@processElements.18"
+      name="Développeur"/>
+  <processElements
+      xsi:type="simplepdl:Resource"
+      amount="4"
+      utilisations="//@processElements.15 //@processElements.16 //@processElements.19 //@processElements.20"
+      name="Machine"/>
+  <processElements
+      xsi:type="simplepdl:Resource"
+      amount="1"
+      utilisations="//@processElements.17"
+      name="Rédacteur"/>
+  <processElements
+      xsi:type="simplepdl:Resource"
+      amount="2"
+      utilisations="//@processElements.21"
+      name="Testeur"/>
+  <processElements
+      xsi:type="simplepdl:ResourceUtilisation"
+      amount="2"
+      work="//@processElements.0"
+      resource="//@processElements.9"/>
+  <processElements
+      xsi:type="simplepdl:ResourceUtilisation"
+      amount="2"
+      work="//@processElements.0"
+      resource="//@processElements.11"/>
+  <processElements
+      xsi:type="simplepdl:ResourceUtilisation"
+      amount="1"
+      work="//@processElements.3"
+      resource="//@processElements.11"/>
+  <processElements
+      xsi:type="simplepdl:ResourceUtilisation"
+      amount="1"
+      work="//@processElements.3"
+      resource="//@processElements.12"/>
+  <processElements
+      xsi:type="simplepdl:ResourceUtilisation"
+      amount="2"
+      work="//@processElements.1"
+      resource="//@processElements.10"/>
+  <processElements
+      xsi:type="simplepdl:ResourceUtilisation"
+      amount="3"
+      work="//@processElements.1"
+      resource="//@processElements.11"/>
+  <processElements
+      xsi:type="simplepdl:ResourceUtilisation"
+      amount="2"
+      work="//@processElements.2"
+      resource="//@processElements.11"/>
+  <processElements
+      xsi:type="simplepdl:ResourceUtilisation"
+      amount="1"
+      work="//@processElements.2"
+      resource="//@processElements.13"/>
 </simplepdl:Process>
