@@ -39,5 +39,20 @@ inv uniqueName('The name property is not unique: ' + self.name):
 context WorkDefinition
 inv validName('Invalid name: ' + self.name):
 	self.name.matches('[A-Za-z_]\\w+')
+	
+context Resource
+inv positiveAmount('The amount must be positive: ' + self.amount.toString()):
+	self.amount > 0
+
+context ResourceUtilisation
+inv validAmount('Invalid amount: ' + self.amount.toString()):
+	self.amount <= self.resource.amount and self.amount > 0
+	
+context ResourceUtilisation
+inv uniqueResourceUtilisation('A WorkDefinition cannot use the same resource more than once: ' + self.work.name + ' --> ' + self.resource.name):
+	self.Process.processElements
+		->select(e | e.oclIsKindOf(ResourceUtilisation))
+		->collect(e | e.oclAsType(ResourceUtilisation))
+		->forAll(r | self = r or self.resource <> r.resource or self.work <> r.work)
 
 endpackage
