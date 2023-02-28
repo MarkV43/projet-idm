@@ -8,6 +8,5 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="lib" path="C:/dev/n7/IDM-2SN/TP/org.eclipse.emf.ecore.xmi-2.7.0.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/fr.n7.petriNet"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

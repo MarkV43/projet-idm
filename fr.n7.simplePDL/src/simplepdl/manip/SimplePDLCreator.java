@@ -22,6 +22,7 @@ public class SimplePDLCreator {
 	public static void main(String[] args) {
 		
 		// Charger le package SimplePDL afin de l'enregistrer dans le registre d'Eclipse.
+		@SuppressWarnings("unused")
 		SimplepdlPackage packageInstance = SimplepdlPackage.eINSTANCE;
 		
 		// Enregistrer l'extension ".xmi" comme devant Ãªtre ouverte Ã 
