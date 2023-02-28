@@ -1,0 +1,17 @@
+net Seasons
+pl Winter (1)
+pl Spring
+pl Summer
+pl Autumn
+tr w2s
+tr s2s
+tr s2a
+tr a2w
+arc Winter -> w2s
+arc w2s -> Spring
+arc Spring -> s2s
+arc s2s -> Summer
+arc Summer -> s2a
+arc s2a -> Autumn
+arc Autumn -> a2w
+arc a2w -> Winter
