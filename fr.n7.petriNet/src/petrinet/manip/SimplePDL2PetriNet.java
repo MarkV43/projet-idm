@@ -20,6 +20,7 @@ import petrinet.Place;
 import petrinet.ReadArc;
 import petrinet.Transition;
 import simplepdl.Process;
+import simplepdl.ResourceUtilisation;
 import simplepdl.SimplepdlPackage;
 import simplepdl.WorkDefinition;
 import simplepdl.WorkSequence;
@@ -184,7 +185,44 @@ public class SimplePDL2PetriNet {
 			}
 		}
 		
-		// TODO take resources into account
+		Map<String, Place> resources = new HashMap<>();
+		for (Object o : process.getProcessElements()) {
+			if (o instanceof simplepdl.Resource) {
+				var res = (simplepdl.Resource) o;
+				
+				Place place = petrinetFactory.createPlace();
+				place.setName(res.getName());
+				place.setTokens(res.getAmount());
+				
+				resources.put(place.getName(), place);
+				
+				network.getElements().add(place);
+			}
+		}
+		
+		for (Object o : process.getProcessElements()) {
+			if (o instanceof ResourceUtilisation) {
+				var ru = (ResourceUtilisation) o;
+				
+				simplepdl.Resource res = ru.getResource();
+				WorkDefinition wd = ru.getWork();
+				
+				Arc start = petrinetFactory.createArc();
+				start.setWeight(ru.getAmount());
+				
+				Arc finish = petrinetFactory.createArc();
+				finish.setWeight(ru.getAmount());
+				
+				start.setPredecessor(resources.get(res.getName()));
+				start.setSuccessor(map.get(wd.getName() + "_start"));
+				
+				finish.setPredecessor(map.get(wd.getName() + "_finish"));
+				finish.setSuccessor(resources.get(res.getName()));
+				
+				network.getArcs().add(start);
+				network.getArcs().add(finish);
+			}
+		}
 		
 		try {
 	    	petrinetResource.save(Collections.EMPTY_MAP);

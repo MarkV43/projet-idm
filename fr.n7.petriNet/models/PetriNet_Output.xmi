@@ -4,26 +4,31 @@
   <elements xsi:type="petrinet:Place" name="Conception_running" incoming="//@arcs.2" outgoing="//@arcs.3"/>
   <elements xsi:type="petrinet:Place" name="Conception_started" incoming="//@arcs.1" outgoing="//@arcs.20 //@arcs.23"/>
   <elements xsi:type="petrinet:Place" name="Conception_finished" incoming="//@arcs.4" outgoing="//@arcs.21 //@arcs.24"/>
-  <elements xsi:type="petrinet:Transition" name="Conception_start" incoming="//@arcs.0" outgoing="//@arcs.1 //@arcs.2"/>
-  <elements xsi:type="petrinet:Transition" name="Conception_finish" incoming="//@arcs.3" outgoing="//@arcs.4"/>
+  <elements xsi:type="petrinet:Transition" name="Conception_start" incoming="//@arcs.0 //@arcs.25 //@arcs.27" outgoing="//@arcs.1 //@arcs.2"/>
+  <elements xsi:type="petrinet:Transition" name="Conception_finish" incoming="//@arcs.3" outgoing="//@arcs.4 //@arcs.26 //@arcs.28"/>
   <elements xsi:type="petrinet:Place" name="Developpement_idle" outgoing="//@arcs.5" tokens="1"/>
   <elements xsi:type="petrinet:Place" name="Developpement_running" incoming="//@arcs.7" outgoing="//@arcs.8"/>
   <elements xsi:type="petrinet:Place" name="Developpement_started" incoming="//@arcs.6"/>
   <elements xsi:type="petrinet:Place" name="Developpement_finished" incoming="//@arcs.9" outgoing="//@arcs.22"/>
-  <elements xsi:type="petrinet:Transition" name="Developpement_start" incoming="//@arcs.5 //@arcs.21" outgoing="//@arcs.6 //@arcs.7"/>
-  <elements xsi:type="petrinet:Transition" name="Developpement_finish" incoming="//@arcs.8" outgoing="//@arcs.9"/>
+  <elements xsi:type="petrinet:Transition" name="Developpement_start" incoming="//@arcs.5 //@arcs.21 //@arcs.33 //@arcs.35" outgoing="//@arcs.6 //@arcs.7"/>
+  <elements xsi:type="petrinet:Transition" name="Developpement_finish" incoming="//@arcs.8" outgoing="//@arcs.9 //@arcs.34 //@arcs.36"/>
   <elements xsi:type="petrinet:Place" name="RedactionTests_idle" outgoing="//@arcs.10" tokens="1"/>
   <elements xsi:type="petrinet:Place" name="RedactionTests_running" incoming="//@arcs.12" outgoing="//@arcs.13"/>
   <elements xsi:type="petrinet:Place" name="RedactionTests_started" incoming="//@arcs.11"/>
   <elements xsi:type="petrinet:Place" name="RedactionTests_finished" incoming="//@arcs.14"/>
-  <elements xsi:type="petrinet:Transition" name="RedactionTests_start" incoming="//@arcs.10 //@arcs.20" outgoing="//@arcs.11 //@arcs.12"/>
-  <elements xsi:type="petrinet:Transition" name="RedactionTests_finish" incoming="//@arcs.13 //@arcs.22" outgoing="//@arcs.14"/>
+  <elements xsi:type="petrinet:Transition" name="RedactionTests_start" incoming="//@arcs.10 //@arcs.20 //@arcs.37 //@arcs.39" outgoing="//@arcs.11 //@arcs.12"/>
+  <elements xsi:type="petrinet:Transition" name="RedactionTests_finish" incoming="//@arcs.13 //@arcs.22" outgoing="//@arcs.14 //@arcs.38 //@arcs.40"/>
   <elements xsi:type="petrinet:Place" name="RedactionDoc_idle" outgoing="//@arcs.15" tokens="1"/>
   <elements xsi:type="petrinet:Place" name="RedactionDoc_running" incoming="//@arcs.17" outgoing="//@arcs.18"/>
   <elements xsi:type="petrinet:Place" name="RedactionDoc_started" incoming="//@arcs.16"/>
   <elements xsi:type="petrinet:Place" name="RedactionDoc_finished" incoming="//@arcs.19"/>
-  <elements xsi:type="petrinet:Transition" name="RedactionDoc_start" incoming="//@arcs.15 //@arcs.23" outgoing="//@arcs.16 //@arcs.17"/>
-  <elements xsi:type="petrinet:Transition" name="RedactionDoc_finish" incoming="//@arcs.18 //@arcs.24" outgoing="//@arcs.19"/>
+  <elements xsi:type="petrinet:Transition" name="RedactionDoc_start" incoming="//@arcs.15 //@arcs.23 //@arcs.29 //@arcs.31" outgoing="//@arcs.16 //@arcs.17"/>
+  <elements xsi:type="petrinet:Transition" name="RedactionDoc_finish" incoming="//@arcs.18 //@arcs.24" outgoing="//@arcs.19 //@arcs.30 //@arcs.32"/>
+  <elements xsi:type="petrinet:Place" name="Concepteur" incoming="//@arcs.26" outgoing="//@arcs.25" tokens="3"/>
+  <elements xsi:type="petrinet:Place" name="D&#xe9;veloppeur" incoming="//@arcs.34" outgoing="//@arcs.33" tokens="2"/>
+  <elements xsi:type="petrinet:Place" name="Machine" incoming="//@arcs.28 //@arcs.30 //@arcs.36 //@arcs.38" outgoing="//@arcs.27 //@arcs.29 //@arcs.35 //@arcs.37" tokens="4"/>
+  <elements xsi:type="petrinet:Place" name="R&#xe9;dacteur" incoming="//@arcs.32" outgoing="//@arcs.31" tokens="1"/>
+  <elements xsi:type="petrinet:Place" name="Testeur" incoming="//@arcs.40" outgoing="//@arcs.39" tokens="2"/>
   <arcs successor="//@elements.4" predecessor="//@elements.0"/>
   <arcs successor="//@elements.2" predecessor="//@elements.4"/>
   <arcs successor="//@elements.1" predecessor="//@elements.4"/>
@@ -49,4 +54,20 @@
   <arcs xsi:type="petrinet:ReadArc" successor="//@elements.17" predecessor="//@elements.9"/>
   <arcs xsi:type="petrinet:ReadArc" successor="//@elements.22" predecessor="//@elements.2"/>
   <arcs xsi:type="petrinet:ReadArc" successor="//@elements.23" predecessor="//@elements.3"/>
+  <arcs weight="2" successor="//@elements.4" predecessor="//@elements.24"/>
+  <arcs weight="2" successor="//@elements.24" predecessor="//@elements.5"/>
+  <arcs weight="2" successor="//@elements.4" predecessor="//@elements.26"/>
+  <arcs weight="2" successor="//@elements.26" predecessor="//@elements.5"/>
+  <arcs successor="//@elements.22" predecessor="//@elements.26"/>
+  <arcs successor="//@elements.26" predecessor="//@elements.23"/>
+  <arcs successor="//@elements.22" predecessor="//@elements.27"/>
+  <arcs successor="//@elements.27" predecessor="//@elements.23"/>
+  <arcs weight="2" successor="//@elements.10" predecessor="//@elements.25"/>
+  <arcs weight="2" successor="//@elements.25" predecessor="//@elements.11"/>
+  <arcs weight="3" successor="//@elements.10" predecessor="//@elements.26"/>
+  <arcs weight="3" successor="//@elements.26" predecessor="//@elements.11"/>
+  <arcs weight="2" successor="//@elements.16" predecessor="//@elements.26"/>
+  <arcs weight="2" successor="//@elements.26" predecessor="//@elements.17"/>
+  <arcs successor="//@elements.16" predecessor="//@elements.28"/>
+  <arcs successor="//@elements.28" predecessor="//@elements.17"/>
 </petrinet:Network>
