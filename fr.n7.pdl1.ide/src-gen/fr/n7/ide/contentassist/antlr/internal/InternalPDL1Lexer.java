@@ -28,10 +28,8 @@ public class InternalPDL1Lexer extends Lexer {
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
     public static final int RULE_INT=6;
-    public static final int T__22=22;
     public static final int RULE_ML_COMMENT=7;
     public static final int T__20=20;
-    public static final int T__21=21;
 
     // delegates
     // delegators
@@ -238,50 +236,8 @@ public class InternalPDL1Lexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPDL1.g:20:7: ( 'from' )
-            // InternalPDL1.g:20:9: 'from'
-            {
-            match("from"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__20"
-
-    // $ANTLR start "T__21"
-    public final void mT__21() throws RecognitionException {
-        try {
-            int _type = T__21;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPDL1.g:21:7: ( 'to' )
-            // InternalPDL1.g:21:9: 'to'
-            {
-            match("to"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__21"
-
-    // $ANTLR start "T__22"
-    public final void mT__22() throws RecognitionException {
-        try {
-            int _type = T__22;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPDL1.g:22:7: ( 'note' )
-            // InternalPDL1.g:22:9: 'note'
+            // InternalPDL1.g:20:7: ( 'note' )
+            // InternalPDL1.g:20:9: 'note'
             {
             match("note"); 
 
@@ -294,17 +250,17 @@ public class InternalPDL1Lexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__22"
+    // $ANTLR end "T__20"
 
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPDL1.g:771:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalPDL1.g:771:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalPDL1.g:717:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalPDL1.g:717:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalPDL1.g:771:11: ( '^' )?
+            // InternalPDL1.g:717:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -313,7 +269,7 @@ public class InternalPDL1Lexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalPDL1.g:771:11: '^'
+                    // InternalPDL1.g:717:11: '^'
                     {
                     match('^'); 
 
@@ -331,7 +287,7 @@ public class InternalPDL1Lexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalPDL1.g:771:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalPDL1.g:717:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -380,10 +336,10 @@ public class InternalPDL1Lexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPDL1.g:773:10: ( ( '0' .. '9' )+ )
-            // InternalPDL1.g:773:12: ( '0' .. '9' )+
+            // InternalPDL1.g:719:10: ( ( '0' .. '9' )+ )
+            // InternalPDL1.g:719:12: ( '0' .. '9' )+
             {
-            // InternalPDL1.g:773:12: ( '0' .. '9' )+
+            // InternalPDL1.g:719:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -397,7 +353,7 @@ public class InternalPDL1Lexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalPDL1.g:773:13: '0' .. '9'
+            	    // InternalPDL1.g:719:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -429,10 +385,10 @@ public class InternalPDL1Lexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPDL1.g:775:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalPDL1.g:775:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalPDL1.g:721:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalPDL1.g:721:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalPDL1.g:775:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalPDL1.g:721:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -450,10 +406,10 @@ public class InternalPDL1Lexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalPDL1.g:775:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalPDL1.g:721:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalPDL1.g:775:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalPDL1.g:721:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -469,7 +425,7 @@ public class InternalPDL1Lexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalPDL1.g:775:21: '\\\\' .
+                    	    // InternalPDL1.g:721:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -477,7 +433,7 @@ public class InternalPDL1Lexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalPDL1.g:775:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalPDL1.g:721:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -502,10 +458,10 @@ public class InternalPDL1Lexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalPDL1.g:775:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalPDL1.g:721:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalPDL1.g:775:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalPDL1.g:721:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -521,7 +477,7 @@ public class InternalPDL1Lexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalPDL1.g:775:54: '\\\\' .
+                    	    // InternalPDL1.g:721:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -529,7 +485,7 @@ public class InternalPDL1Lexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalPDL1.g:775:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalPDL1.g:721:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -572,12 +528,12 @@ public class InternalPDL1Lexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPDL1.g:777:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalPDL1.g:777:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalPDL1.g:723:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalPDL1.g:723:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalPDL1.g:777:24: ( options {greedy=false; } : . )*
+            // InternalPDL1.g:723:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -602,7 +558,7 @@ public class InternalPDL1Lexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalPDL1.g:777:52: .
+            	    // InternalPDL1.g:723:52: .
             	    {
             	    matchAny(); 
 
@@ -632,12 +588,12 @@ public class InternalPDL1Lexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPDL1.g:779:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalPDL1.g:779:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalPDL1.g:725:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalPDL1.g:725:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalPDL1.g:779:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalPDL1.g:725:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -650,7 +606,7 @@ public class InternalPDL1Lexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalPDL1.g:779:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalPDL1.g:725:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -670,7 +626,7 @@ public class InternalPDL1Lexer extends Lexer {
                 }
             } while (true);
 
-            // InternalPDL1.g:779:40: ( ( '\\r' )? '\\n' )?
+            // InternalPDL1.g:725:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -679,9 +635,9 @@ public class InternalPDL1Lexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalPDL1.g:779:41: ( '\\r' )? '\\n'
+                    // InternalPDL1.g:725:41: ( '\\r' )? '\\n'
                     {
-                    // InternalPDL1.g:779:41: ( '\\r' )?
+                    // InternalPDL1.g:725:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -690,7 +646,7 @@ public class InternalPDL1Lexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalPDL1.g:779:41: '\\r'
+                            // InternalPDL1.g:725:41: '\\r'
                             {
                             match('\r'); 
 
@@ -722,10 +678,10 @@ public class InternalPDL1Lexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPDL1.g:781:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalPDL1.g:781:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalPDL1.g:727:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalPDL1.g:727:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalPDL1.g:781:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalPDL1.g:727:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -779,8 +735,8 @@ public class InternalPDL1Lexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPDL1.g:783:16: ( . )
-            // InternalPDL1.g:783:18: .
+            // InternalPDL1.g:729:16: ( . )
+            // InternalPDL1.g:729:18: .
             {
             matchAny(); 
 
@@ -795,8 +751,8 @@ public class InternalPDL1Lexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // InternalPDL1.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=19;
+        // InternalPDL1.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=17;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -870,63 +826,49 @@ public class InternalPDL1Lexer extends Lexer {
                 }
                 break;
             case 11 :
-                // InternalPDL1.g:1:70: T__21
-                {
-                mT__21(); 
-
-                }
-                break;
-            case 12 :
-                // InternalPDL1.g:1:76: T__22
-                {
-                mT__22(); 
-
-                }
-                break;
-            case 13 :
-                // InternalPDL1.g:1:82: RULE_ID
+                // InternalPDL1.g:1:70: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 14 :
-                // InternalPDL1.g:1:90: RULE_INT
+            case 12 :
+                // InternalPDL1.g:1:78: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 15 :
-                // InternalPDL1.g:1:99: RULE_STRING
+            case 13 :
+                // InternalPDL1.g:1:87: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 16 :
-                // InternalPDL1.g:1:111: RULE_ML_COMMENT
+            case 14 :
+                // InternalPDL1.g:1:99: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 17 :
-                // InternalPDL1.g:1:127: RULE_SL_COMMENT
+            case 15 :
+                // InternalPDL1.g:1:115: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 18 :
-                // InternalPDL1.g:1:143: RULE_WS
+            case 16 :
+                // InternalPDL1.g:1:131: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 19 :
-                // InternalPDL1.g:1:151: RULE_ANY_OTHER
+            case 17 :
+                // InternalPDL1.g:1:139: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -940,73 +882,66 @@ public class InternalPDL1Lexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\3\22\2\uffff\3\22\1\20\2\uffff\3\20\2\uffff\1\22\1\uffff\3\22\2\uffff\1\47\1\50\1\51\1\22\5\uffff\1\53\1\54\1\55\1\56\2\22\3\uffff\1\22\4\uffff\1\62\1\22\1\64\1\uffff\1\22\1\uffff\1\22\1\67\1\uffff";
+        "\1\uffff\3\21\2\uffff\2\21\1\17\2\uffff\3\17\2\uffff\1\21\1\uffff\2\21\2\uffff\1\43\1\44\1\21\5\uffff\1\46\1\47\1\50\1\51\1\21\2\uffff\1\21\4\uffff\1\21\1\55\1\21\1\uffff\1\21\1\60\1\uffff";
     static final String DFA12_eofS =
-        "\70\uffff";
+        "\61\uffff";
     static final String DFA12_minS =
-        "\1\0\2\62\1\162\2\uffff\1\144\2\157\1\101\2\uffff\2\0\1\52\2\uffff\1\146\1\uffff\1\146\2\157\2\uffff\3\60\1\164\5\uffff\4\60\1\155\1\143\3\uffff\1\145\4\uffff\1\60\1\145\1\60\1\uffff\1\163\1\uffff\1\163\1\60\1\uffff";
+        "\1\0\2\62\1\162\2\uffff\1\144\1\157\1\101\2\uffff\2\0\1\52\2\uffff\1\146\1\uffff\1\146\1\157\2\uffff\2\60\1\164\5\uffff\4\60\1\143\2\uffff\1\145\4\uffff\1\145\1\60\1\163\1\uffff\1\163\1\60\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\62\2\162\2\uffff\1\163\2\157\1\172\2\uffff\2\uffff\1\57\2\uffff\1\163\1\uffff\1\163\2\157\2\uffff\3\172\1\164\5\uffff\4\172\1\155\1\143\3\uffff\1\145\4\uffff\1\172\1\145\1\172\1\uffff\1\163\1\uffff\1\163\1\172\1\uffff";
+        "\1\uffff\2\62\1\162\2\uffff\1\163\1\157\1\172\2\uffff\2\uffff\1\57\2\uffff\1\163\1\uffff\1\163\1\157\2\uffff\2\172\1\164\5\uffff\4\172\1\143\2\uffff\1\145\4\uffff\1\145\1\172\1\163\1\uffff\1\163\1\172\1\uffff";
     static final String DFA12_acceptS =
-        "\4\uffff\1\6\1\7\4\uffff\1\15\1\16\3\uffff\1\22\1\23\1\uffff\1\15\3\uffff\1\6\1\7\4\uffff\1\16\1\17\1\20\1\21\1\22\6\uffff\1\10\1\11\1\13\1\uffff\1\1\1\3\1\2\1\4\3\uffff\1\12\1\uffff\1\14\2\uffff\1\5";
+        "\4\uffff\1\6\1\7\3\uffff\1\13\1\14\3\uffff\1\20\1\21\1\uffff\1\13\2\uffff\1\6\1\7\3\uffff\1\14\1\15\1\16\1\17\1\20\5\uffff\1\10\1\11\1\uffff\1\1\1\3\1\2\1\4\3\uffff\1\12\2\uffff\1\5";
     static final String DFA12_specialS =
-        "\1\0\13\uffff\1\2\1\1\52\uffff}>";
+        "\1\1\12\uffff\1\0\1\2\44\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\20\2\17\2\20\1\17\22\20\1\17\1\20\1\14\4\20\1\15\7\20\1\16\12\13\7\20\32\12\3\20\1\11\1\12\1\20\5\12\1\2\7\12\1\10\1\12\1\3\2\12\1\1\1\7\2\12\1\6\3\12\1\4\1\20\1\5\uff82\20",
-            "\1\21",
-            "\1\23\77\uffff\1\24",
-            "\1\25",
+            "\11\17\2\16\2\17\1\16\22\17\1\16\1\17\1\13\4\17\1\14\7\17\1\15\12\12\7\17\32\11\3\17\1\10\1\11\1\17\5\11\1\2\7\11\1\7\1\11\1\3\2\11\1\1\3\11\1\6\3\11\1\4\1\17\1\5\uff82\17",
+            "\1\20",
+            "\1\22",
+            "\1\23",
             "",
             "",
-            "\1\30\16\uffff\1\31",
-            "\1\32",
-            "\1\33",
-            "\32\22\4\uffff\1\22\1\uffff\32\22",
+            "\1\26\16\uffff\1\27",
+            "\1\30",
+            "\32\21\4\uffff\1\21\1\uffff\32\21",
             "",
             "",
-            "\0\35",
-            "\0\35",
-            "\1\36\4\uffff\1\37",
+            "\0\32",
+            "\0\32",
+            "\1\33\4\uffff\1\34",
             "",
             "",
-            "\1\42\14\uffff\1\41",
+            "\1\37\14\uffff\1\36",
             "",
-            "\1\44\14\uffff\1\43",
+            "\1\41\14\uffff\1\40",
+            "\1\42",
+            "",
+            "",
+            "\12\21\7\uffff\32\21\4\uffff\1\21\1\uffff\32\21",
+            "\12\21\7\uffff\32\21\4\uffff\1\21\1\uffff\32\21",
             "\1\45",
-            "\1\46",
             "",
             "",
-            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
-            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
-            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
+            "",
+            "",
+            "",
+            "\12\21\7\uffff\32\21\4\uffff\1\21\1\uffff\32\21",
+            "\12\21\7\uffff\32\21\4\uffff\1\21\1\uffff\32\21",
+            "\12\21\7\uffff\32\21\4\uffff\1\21\1\uffff\32\21",
+            "\12\21\7\uffff\32\21\4\uffff\1\21\1\uffff\32\21",
             "\1\52",
             "",
             "",
+            "\1\53",
             "",
             "",
             "",
-            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
-            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
-            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
-            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
+            "",
+            "\1\54",
+            "\12\21\7\uffff\32\21\4\uffff\1\21\1\uffff\32\21",
+            "\1\56",
+            "",
             "\1\57",
-            "\1\60",
-            "",
-            "",
-            "",
-            "\1\61",
-            "",
-            "",
-            "",
-            "",
-            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
-            "\1\63",
-            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
-            "",
-            "\1\65",
-            "",
-            "\1\66",
-            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
+            "\12\21\7\uffff\32\21\4\uffff\1\21\1\uffff\32\21",
             ""
     };
 
@@ -1040,13 +975,23 @@ public class InternalPDL1Lexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA12_11 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_11>='\u0000' && LA12_11<='\uFFFF')) ) {s = 26;}
+
+                        else s = 15;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -1062,35 +1007,23 @@ public class InternalPDL1Lexer extends Lexer {
 
                         else if ( (LA12_0=='w') ) {s = 6;}
 
-                        else if ( (LA12_0=='t') ) {s = 7;}
+                        else if ( (LA12_0=='n') ) {s = 7;}
 
-                        else if ( (LA12_0=='n') ) {s = 8;}
+                        else if ( (LA12_0=='^') ) {s = 8;}
 
-                        else if ( (LA12_0=='^') ) {s = 9;}
+                        else if ( ((LA12_0>='A' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='e')||(LA12_0>='g' && LA12_0<='m')||LA12_0=='o'||(LA12_0>='q' && LA12_0<='r')||(LA12_0>='t' && LA12_0<='v')||(LA12_0>='x' && LA12_0<='z')) ) {s = 9;}
 
-                        else if ( ((LA12_0>='A' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='e')||(LA12_0>='g' && LA12_0<='m')||LA12_0=='o'||(LA12_0>='q' && LA12_0<='r')||(LA12_0>='u' && LA12_0<='v')||(LA12_0>='x' && LA12_0<='z')) ) {s = 10;}
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 10;}
 
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 11;}
+                        else if ( (LA12_0=='\"') ) {s = 11;}
 
-                        else if ( (LA12_0=='\"') ) {s = 12;}
+                        else if ( (LA12_0=='\'') ) {s = 12;}
 
-                        else if ( (LA12_0=='\'') ) {s = 13;}
+                        else if ( (LA12_0=='/') ) {s = 13;}
 
-                        else if ( (LA12_0=='/') ) {s = 14;}
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 14;}
 
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 15;}
-
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='.')||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 16;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA12_13 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_13>='\u0000' && LA12_13<='\uFFFF')) ) {s = 29;}
-
-                        else s = 16;
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='.')||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 15;}
 
                         if ( s>=0 ) return s;
                         break;
@@ -1098,9 +1031,9 @@ public class InternalPDL1Lexer extends Lexer {
                         int LA12_12 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_12>='\u0000' && LA12_12<='\uFFFF')) ) {s = 29;}
+                        if ( ((LA12_12>='\u0000' && LA12_12<='\uFFFF')) ) {s = 26;}
 
-                        else s = 16;
+                        else s = 15;
 
                         if ( s>=0 ) return s;
                         break;

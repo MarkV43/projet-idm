@@ -10,9 +10,10 @@ ProcessElement : WorkDefinition | WorkSequence | Guidance;
 
 WorkDefinition : 'wd' name=ID ;
 
-WorkSequence : 'ws' linkType=WorkSequenceType
-	'from' predecessor=[WorkDefinition]
-	'to' successor=[WorkDefinition] ;
+WorkSequence : 'ws' 
+	predecessor=[WorkDefinition]
+	linkType=WorkSequenceType
+	successor=[WorkDefinition] ;
 	
 enum WorkSequenceType : start2start = 's2s'
 	| finish2start = 'f2s'

@@ -40,9 +40,9 @@ public class PDL1Parser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getProcessAccess().getNameAssignment_1(), "rule__Process__NameAssignment_1");
 			builder.put(grammarAccess.getProcessAccess().getProcessElementsAssignment_3(), "rule__Process__ProcessElementsAssignment_3");
 			builder.put(grammarAccess.getWorkDefinitionAccess().getNameAssignment_1(), "rule__WorkDefinition__NameAssignment_1");
-			builder.put(grammarAccess.getWorkSequenceAccess().getLinkTypeAssignment_1(), "rule__WorkSequence__LinkTypeAssignment_1");
-			builder.put(grammarAccess.getWorkSequenceAccess().getPredecessorAssignment_3(), "rule__WorkSequence__PredecessorAssignment_3");
-			builder.put(grammarAccess.getWorkSequenceAccess().getSuccessorAssignment_5(), "rule__WorkSequence__SuccessorAssignment_5");
+			builder.put(grammarAccess.getWorkSequenceAccess().getPredecessorAssignment_1(), "rule__WorkSequence__PredecessorAssignment_1");
+			builder.put(grammarAccess.getWorkSequenceAccess().getLinkTypeAssignment_2(), "rule__WorkSequence__LinkTypeAssignment_2");
+			builder.put(grammarAccess.getWorkSequenceAccess().getSuccessorAssignment_3(), "rule__WorkSequence__SuccessorAssignment_3");
 			builder.put(grammarAccess.getGuidanceAccess().getTextAssignment_1(), "rule__Guidance__TextAssignment_1");
 		}
 	}

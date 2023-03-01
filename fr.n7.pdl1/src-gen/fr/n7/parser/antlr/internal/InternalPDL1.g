@@ -238,9 +238,22 @@ ruleWorkSequence returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getWorkSequenceAccess().getLinkTypeWorkSequenceTypeEnumRuleCall_1_0());
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getWorkSequenceRule());
+					}
 				}
-				lv_linkType_1_0=ruleWorkSequenceType
+				otherlv_1=RULE_ID
+				{
+					newLeafNode(otherlv_1, grammarAccess.getWorkSequenceAccess().getPredecessorWorkDefinitionCrossReference_1_0());
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getWorkSequenceAccess().getLinkTypeWorkSequenceTypeEnumRuleCall_2_0());
+				}
+				lv_linkType_2_0=ruleWorkSequenceType
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getWorkSequenceRule());
@@ -248,16 +261,12 @@ ruleWorkSequence returns [EObject current=null]
 					set(
 						$current,
 						"linkType",
-						lv_linkType_1_0,
+						lv_linkType_2_0,
 						"fr.n7.PDL1.WorkSequenceType");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_2='from'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getWorkSequenceAccess().getFromKeyword_2());
-		}
 		(
 			(
 				{
@@ -267,24 +276,7 @@ ruleWorkSequence returns [EObject current=null]
 				}
 				otherlv_3=RULE_ID
 				{
-					newLeafNode(otherlv_3, grammarAccess.getWorkSequenceAccess().getPredecessorWorkDefinitionCrossReference_3_0());
-				}
-			)
-		)
-		otherlv_4='to'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getWorkSequenceAccess().getToKeyword_4());
-		}
-		(
-			(
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getWorkSequenceRule());
-					}
-				}
-				otherlv_5=RULE_ID
-				{
-					newLeafNode(otherlv_5, grammarAccess.getWorkSequenceAccess().getSuccessorWorkDefinitionCrossReference_5_0());
+					newLeafNode(otherlv_3, grammarAccess.getWorkSequenceAccess().getSuccessorWorkDefinitionCrossReference_3_0());
 				}
 			)
 		)

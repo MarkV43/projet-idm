@@ -153,22 +153,22 @@ public interface PDL1Package extends EPackage
   int WORK_SEQUENCE = 3;
 
   /**
-   * The feature id for the '<em><b>Link Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int WORK_SEQUENCE__LINK_TYPE = PROCESS_ELEMENT_FEATURE_COUNT + 0;
-
-  /**
    * The feature id for the '<em><b>Predecessor</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int WORK_SEQUENCE__PREDECESSOR = PROCESS_ELEMENT_FEATURE_COUNT + 1;
+  int WORK_SEQUENCE__PREDECESSOR = PROCESS_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Link Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WORK_SEQUENCE__LINK_TYPE = PROCESS_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Successor</b></em>' reference.
@@ -301,17 +301,6 @@ public interface PDL1Package extends EPackage
   EClass getWorkSequence();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.n7.pDL1.WorkSequence#getLinkType <em>Link Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Link Type</em>'.
-   * @see fr.n7.pDL1.WorkSequence#getLinkType()
-   * @see #getWorkSequence()
-   * @generated
-   */
-  EAttribute getWorkSequence_LinkType();
-
-  /**
    * Returns the meta object for the reference '{@link fr.n7.pDL1.WorkSequence#getPredecessor <em>Predecessor</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -321,6 +310,17 @@ public interface PDL1Package extends EPackage
    * @generated
    */
   EReference getWorkSequence_Predecessor();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.n7.pDL1.WorkSequence#getLinkType <em>Link Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Link Type</em>'.
+   * @see fr.n7.pDL1.WorkSequence#getLinkType()
+   * @see #getWorkSequence()
+   * @generated
+   */
+  EAttribute getWorkSequence_LinkType();
 
   /**
    * Returns the meta object for the reference '{@link fr.n7.pDL1.WorkSequence#getSuccessor <em>Successor</em>}'.
@@ -452,20 +452,20 @@ public interface PDL1Package extends EPackage
     EClass WORK_SEQUENCE = eINSTANCE.getWorkSequence();
 
     /**
-     * The meta object literal for the '<em><b>Link Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute WORK_SEQUENCE__LINK_TYPE = eINSTANCE.getWorkSequence_LinkType();
-
-    /**
      * The meta object literal for the '<em><b>Predecessor</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference WORK_SEQUENCE__PREDECESSOR = eINSTANCE.getWorkSequence_Predecessor();
+
+    /**
+     * The meta object literal for the '<em><b>Link Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute WORK_SEQUENCE__LINK_TYPE = eINSTANCE.getWorkSequence_LinkType();
 
     /**
      * The meta object literal for the '<em><b>Successor</b></em>' reference feature.

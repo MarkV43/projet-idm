@@ -21,8 +21,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PDL1.ecore#//WorkDefinition/name"/>
     </genClasses>
     <genClasses ecoreClass="PDL1.ecore#//WorkSequence">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PDL1.ecore#//WorkSequence/linkType"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PDL1.ecore#//WorkSequence/predecessor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PDL1.ecore#//WorkSequence/linkType"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PDL1.ecore#//WorkSequence/successor"/>
     </genClasses>
     <genClasses ecoreClass="PDL1.ecore#//Guidance">

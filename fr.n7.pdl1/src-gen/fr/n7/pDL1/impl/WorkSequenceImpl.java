@@ -23,8 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.n7.pDL1.impl.WorkSequenceImpl#getLinkType <em>Link Type</em>}</li>
  *   <li>{@link fr.n7.pDL1.impl.WorkSequenceImpl#getPredecessor <em>Predecessor</em>}</li>
+ *   <li>{@link fr.n7.pDL1.impl.WorkSequenceImpl#getLinkType <em>Link Type</em>}</li>
  *   <li>{@link fr.n7.pDL1.impl.WorkSequenceImpl#getSuccessor <em>Successor</em>}</li>
  * </ul>
  *
@@ -32,6 +32,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class WorkSequenceImpl extends ProcessElementImpl implements WorkSequence
 {
+  /**
+   * The cached value of the '{@link #getPredecessor() <em>Predecessor</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPredecessor()
+   * @generated
+   * @ordered
+   */
+  protected WorkDefinition predecessor;
+
   /**
    * The default value of the '{@link #getLinkType() <em>Link Type</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -51,16 +61,6 @@ public class WorkSequenceImpl extends ProcessElementImpl implements WorkSequence
    * @ordered
    */
   protected WorkSequenceType linkType = LINK_TYPE_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getPredecessor() <em>Predecessor</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPredecessor()
-   * @generated
-   * @ordered
-   */
-  protected WorkDefinition predecessor;
 
   /**
    * The cached value of the '{@link #getSuccessor() <em>Successor</em>}' reference.
@@ -91,31 +91,6 @@ public class WorkSequenceImpl extends ProcessElementImpl implements WorkSequence
   protected EClass eStaticClass()
   {
     return PDL1Package.Literals.WORK_SEQUENCE;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public WorkSequenceType getLinkType()
-  {
-    return linkType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setLinkType(WorkSequenceType newLinkType)
-  {
-    WorkSequenceType oldLinkType = linkType;
-    linkType = newLinkType == null ? LINK_TYPE_EDEFAULT : newLinkType;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PDL1Package.WORK_SEQUENCE__LINK_TYPE, oldLinkType, linkType));
   }
 
   /**
@@ -161,6 +136,31 @@ public class WorkSequenceImpl extends ProcessElementImpl implements WorkSequence
     predecessor = newPredecessor;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, PDL1Package.WORK_SEQUENCE__PREDECESSOR, oldPredecessor, predecessor));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public WorkSequenceType getLinkType()
+  {
+    return linkType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setLinkType(WorkSequenceType newLinkType)
+  {
+    WorkSequenceType oldLinkType = linkType;
+    linkType = newLinkType == null ? LINK_TYPE_EDEFAULT : newLinkType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PDL1Package.WORK_SEQUENCE__LINK_TYPE, oldLinkType, linkType));
   }
 
   /**
@@ -218,11 +218,11 @@ public class WorkSequenceImpl extends ProcessElementImpl implements WorkSequence
   {
     switch (featureID)
     {
-      case PDL1Package.WORK_SEQUENCE__LINK_TYPE:
-        return getLinkType();
       case PDL1Package.WORK_SEQUENCE__PREDECESSOR:
         if (resolve) return getPredecessor();
         return basicGetPredecessor();
+      case PDL1Package.WORK_SEQUENCE__LINK_TYPE:
+        return getLinkType();
       case PDL1Package.WORK_SEQUENCE__SUCCESSOR:
         if (resolve) return getSuccessor();
         return basicGetSuccessor();
@@ -240,11 +240,11 @@ public class WorkSequenceImpl extends ProcessElementImpl implements WorkSequence
   {
     switch (featureID)
     {
-      case PDL1Package.WORK_SEQUENCE__LINK_TYPE:
-        setLinkType((WorkSequenceType)newValue);
-        return;
       case PDL1Package.WORK_SEQUENCE__PREDECESSOR:
         setPredecessor((WorkDefinition)newValue);
+        return;
+      case PDL1Package.WORK_SEQUENCE__LINK_TYPE:
+        setLinkType((WorkSequenceType)newValue);
         return;
       case PDL1Package.WORK_SEQUENCE__SUCCESSOR:
         setSuccessor((WorkDefinition)newValue);
@@ -263,11 +263,11 @@ public class WorkSequenceImpl extends ProcessElementImpl implements WorkSequence
   {
     switch (featureID)
     {
-      case PDL1Package.WORK_SEQUENCE__LINK_TYPE:
-        setLinkType(LINK_TYPE_EDEFAULT);
-        return;
       case PDL1Package.WORK_SEQUENCE__PREDECESSOR:
         setPredecessor((WorkDefinition)null);
+        return;
+      case PDL1Package.WORK_SEQUENCE__LINK_TYPE:
+        setLinkType(LINK_TYPE_EDEFAULT);
         return;
       case PDL1Package.WORK_SEQUENCE__SUCCESSOR:
         setSuccessor((WorkDefinition)null);
@@ -286,10 +286,10 @@ public class WorkSequenceImpl extends ProcessElementImpl implements WorkSequence
   {
     switch (featureID)
     {
-      case PDL1Package.WORK_SEQUENCE__LINK_TYPE:
-        return linkType != LINK_TYPE_EDEFAULT;
       case PDL1Package.WORK_SEQUENCE__PREDECESSOR:
         return predecessor != null;
+      case PDL1Package.WORK_SEQUENCE__LINK_TYPE:
+        return linkType != LINK_TYPE_EDEFAULT;
       case PDL1Package.WORK_SEQUENCE__SUCCESSOR:
         return successor != null;
     }

@@ -11,8 +11,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WorkSequence" eSuperTypes="#//ProcessElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="linkType" eType="#//WorkSequenceType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="predecessor" eType="#//WorkDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="linkType" eType="#//WorkSequenceType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="successor" eType="#//WorkDefinition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="WorkSequenceType">

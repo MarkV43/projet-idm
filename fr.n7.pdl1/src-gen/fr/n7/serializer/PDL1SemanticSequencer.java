@@ -114,22 +114,22 @@ public class PDL1SemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     WorkSequence returns WorkSequence
 	 *
 	 * Constraint:
-	 *     (linkType=WorkSequenceType predecessor=[WorkDefinition|ID] successor=[WorkDefinition|ID])
+	 *     (predecessor=[WorkDefinition|ID] linkType=WorkSequenceType successor=[WorkDefinition|ID])
 	 * </pre>
 	 */
 	protected void sequence_WorkSequence(ISerializationContext context, WorkSequence semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PDL1Package.Literals.WORK_SEQUENCE__LINK_TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PDL1Package.Literals.WORK_SEQUENCE__LINK_TYPE));
 			if (transientValues.isValueTransient(semanticObject, PDL1Package.Literals.WORK_SEQUENCE__PREDECESSOR) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PDL1Package.Literals.WORK_SEQUENCE__PREDECESSOR));
+			if (transientValues.isValueTransient(semanticObject, PDL1Package.Literals.WORK_SEQUENCE__LINK_TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PDL1Package.Literals.WORK_SEQUENCE__LINK_TYPE));
 			if (transientValues.isValueTransient(semanticObject, PDL1Package.Literals.WORK_SEQUENCE__SUCCESSOR) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PDL1Package.Literals.WORK_SEQUENCE__SUCCESSOR));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getWorkSequenceAccess().getLinkTypeWorkSequenceTypeEnumRuleCall_1_0(), semanticObject.getLinkType());
-		feeder.accept(grammarAccess.getWorkSequenceAccess().getPredecessorWorkDefinitionIDTerminalRuleCall_3_0_1(), semanticObject.eGet(PDL1Package.Literals.WORK_SEQUENCE__PREDECESSOR, false));
-		feeder.accept(grammarAccess.getWorkSequenceAccess().getSuccessorWorkDefinitionIDTerminalRuleCall_5_0_1(), semanticObject.eGet(PDL1Package.Literals.WORK_SEQUENCE__SUCCESSOR, false));
+		feeder.accept(grammarAccess.getWorkSequenceAccess().getPredecessorWorkDefinitionIDTerminalRuleCall_1_0_1(), semanticObject.eGet(PDL1Package.Literals.WORK_SEQUENCE__PREDECESSOR, false));
+		feeder.accept(grammarAccess.getWorkSequenceAccess().getLinkTypeWorkSequenceTypeEnumRuleCall_2_0(), semanticObject.getLinkType());
+		feeder.accept(grammarAccess.getWorkSequenceAccess().getSuccessorWorkDefinitionIDTerminalRuleCall_3_0_1(), semanticObject.eGet(PDL1Package.Literals.WORK_SEQUENCE__SUCCESSOR, false));
 		feeder.finish();
 	}
 	

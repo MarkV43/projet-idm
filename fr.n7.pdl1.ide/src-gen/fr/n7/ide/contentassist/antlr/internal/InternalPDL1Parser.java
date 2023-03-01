@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'s2s'", "'f2s'", "'s2f'", "'f2f'", "'process'", "'{'", "'}'", "'wd'", "'ws'", "'from'", "'to'", "'note'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'s2s'", "'f2s'", "'s2f'", "'f2f'", "'process'", "'{'", "'}'", "'wd'", "'ws'", "'note'"
     };
     public static final int RULE_STRING=5;
     public static final int RULE_SL_COMMENT=8;
@@ -40,10 +40,8 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
     public static final int RULE_INT=6;
-    public static final int T__22=22;
     public static final int RULE_ML_COMMENT=7;
     public static final int T__20=20;
-    public static final int T__21=21;
 
     // delegates
     // delegators
@@ -532,7 +530,7 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
                 alt1=2;
                 }
                 break;
-            case 22:
+            case 20:
                 {
                 alt1=3;
                 }
@@ -1051,7 +1049,7 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( ((LA3_0>=18 && LA3_0<=19)||LA3_0==22) ) {
+                if ( ((LA3_0>=18 && LA3_0<=20)) ) {
                     alt3=1;
                 }
 
@@ -1331,7 +1329,7 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
             // InternalPDL1.g:446:1: ( rule__WorkSequence__Group__0__Impl rule__WorkSequence__Group__1 )
             // InternalPDL1.g:447:2: rule__WorkSequence__Group__0__Impl rule__WorkSequence__Group__1
             {
-            pushFollow(FOLLOW_7);
+            pushFollow(FOLLOW_3);
             rule__WorkSequence__Group__0__Impl();
 
             state._fsp--;
@@ -1406,7 +1404,7 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
             // InternalPDL1.g:473:1: ( rule__WorkSequence__Group__1__Impl rule__WorkSequence__Group__2 )
             // InternalPDL1.g:474:2: rule__WorkSequence__Group__1__Impl rule__WorkSequence__Group__2
             {
-            pushFollow(FOLLOW_8);
+            pushFollow(FOLLOW_7);
             rule__WorkSequence__Group__1__Impl();
 
             state._fsp--;
@@ -1435,31 +1433,31 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkSequence__Group__1__Impl"
-    // InternalPDL1.g:481:1: rule__WorkSequence__Group__1__Impl : ( ( rule__WorkSequence__LinkTypeAssignment_1 ) ) ;
+    // InternalPDL1.g:481:1: rule__WorkSequence__Group__1__Impl : ( ( rule__WorkSequence__PredecessorAssignment_1 ) ) ;
     public final void rule__WorkSequence__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPDL1.g:485:1: ( ( ( rule__WorkSequence__LinkTypeAssignment_1 ) ) )
-            // InternalPDL1.g:486:1: ( ( rule__WorkSequence__LinkTypeAssignment_1 ) )
+            // InternalPDL1.g:485:1: ( ( ( rule__WorkSequence__PredecessorAssignment_1 ) ) )
+            // InternalPDL1.g:486:1: ( ( rule__WorkSequence__PredecessorAssignment_1 ) )
             {
-            // InternalPDL1.g:486:1: ( ( rule__WorkSequence__LinkTypeAssignment_1 ) )
-            // InternalPDL1.g:487:2: ( rule__WorkSequence__LinkTypeAssignment_1 )
+            // InternalPDL1.g:486:1: ( ( rule__WorkSequence__PredecessorAssignment_1 ) )
+            // InternalPDL1.g:487:2: ( rule__WorkSequence__PredecessorAssignment_1 )
             {
-             before(grammarAccess.getWorkSequenceAccess().getLinkTypeAssignment_1()); 
-            // InternalPDL1.g:488:2: ( rule__WorkSequence__LinkTypeAssignment_1 )
-            // InternalPDL1.g:488:3: rule__WorkSequence__LinkTypeAssignment_1
+             before(grammarAccess.getWorkSequenceAccess().getPredecessorAssignment_1()); 
+            // InternalPDL1.g:488:2: ( rule__WorkSequence__PredecessorAssignment_1 )
+            // InternalPDL1.g:488:3: rule__WorkSequence__PredecessorAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__WorkSequence__LinkTypeAssignment_1();
+            rule__WorkSequence__PredecessorAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getWorkSequenceAccess().getLinkTypeAssignment_1()); 
+             after(grammarAccess.getWorkSequenceAccess().getPredecessorAssignment_1()); 
 
             }
 
@@ -1520,21 +1518,31 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkSequence__Group__2__Impl"
-    // InternalPDL1.g:508:1: rule__WorkSequence__Group__2__Impl : ( 'from' ) ;
+    // InternalPDL1.g:508:1: rule__WorkSequence__Group__2__Impl : ( ( rule__WorkSequence__LinkTypeAssignment_2 ) ) ;
     public final void rule__WorkSequence__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPDL1.g:512:1: ( ( 'from' ) )
-            // InternalPDL1.g:513:1: ( 'from' )
+            // InternalPDL1.g:512:1: ( ( ( rule__WorkSequence__LinkTypeAssignment_2 ) ) )
+            // InternalPDL1.g:513:1: ( ( rule__WorkSequence__LinkTypeAssignment_2 ) )
             {
-            // InternalPDL1.g:513:1: ( 'from' )
-            // InternalPDL1.g:514:2: 'from'
+            // InternalPDL1.g:513:1: ( ( rule__WorkSequence__LinkTypeAssignment_2 ) )
+            // InternalPDL1.g:514:2: ( rule__WorkSequence__LinkTypeAssignment_2 )
             {
-             before(grammarAccess.getWorkSequenceAccess().getFromKeyword_2()); 
-            match(input,20,FOLLOW_2); 
-             after(grammarAccess.getWorkSequenceAccess().getFromKeyword_2()); 
+             before(grammarAccess.getWorkSequenceAccess().getLinkTypeAssignment_2()); 
+            // InternalPDL1.g:515:2: ( rule__WorkSequence__LinkTypeAssignment_2 )
+            // InternalPDL1.g:515:3: rule__WorkSequence__LinkTypeAssignment_2
+            {
+            pushFollow(FOLLOW_2);
+            rule__WorkSequence__LinkTypeAssignment_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getWorkSequenceAccess().getLinkTypeAssignment_2()); 
 
             }
 
@@ -1557,22 +1565,17 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkSequence__Group__3"
-    // InternalPDL1.g:523:1: rule__WorkSequence__Group__3 : rule__WorkSequence__Group__3__Impl rule__WorkSequence__Group__4 ;
+    // InternalPDL1.g:523:1: rule__WorkSequence__Group__3 : rule__WorkSequence__Group__3__Impl ;
     public final void rule__WorkSequence__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPDL1.g:527:1: ( rule__WorkSequence__Group__3__Impl rule__WorkSequence__Group__4 )
-            // InternalPDL1.g:528:2: rule__WorkSequence__Group__3__Impl rule__WorkSequence__Group__4
+            // InternalPDL1.g:527:1: ( rule__WorkSequence__Group__3__Impl )
+            // InternalPDL1.g:528:2: rule__WorkSequence__Group__3__Impl
             {
-            pushFollow(FOLLOW_9);
-            rule__WorkSequence__Group__3__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__WorkSequence__Group__4();
+            rule__WorkSequence__Group__3__Impl();
 
             state._fsp--;
 
@@ -1595,31 +1598,31 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkSequence__Group__3__Impl"
-    // InternalPDL1.g:535:1: rule__WorkSequence__Group__3__Impl : ( ( rule__WorkSequence__PredecessorAssignment_3 ) ) ;
+    // InternalPDL1.g:534:1: rule__WorkSequence__Group__3__Impl : ( ( rule__WorkSequence__SuccessorAssignment_3 ) ) ;
     public final void rule__WorkSequence__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPDL1.g:539:1: ( ( ( rule__WorkSequence__PredecessorAssignment_3 ) ) )
-            // InternalPDL1.g:540:1: ( ( rule__WorkSequence__PredecessorAssignment_3 ) )
+            // InternalPDL1.g:538:1: ( ( ( rule__WorkSequence__SuccessorAssignment_3 ) ) )
+            // InternalPDL1.g:539:1: ( ( rule__WorkSequence__SuccessorAssignment_3 ) )
             {
-            // InternalPDL1.g:540:1: ( ( rule__WorkSequence__PredecessorAssignment_3 ) )
-            // InternalPDL1.g:541:2: ( rule__WorkSequence__PredecessorAssignment_3 )
+            // InternalPDL1.g:539:1: ( ( rule__WorkSequence__SuccessorAssignment_3 ) )
+            // InternalPDL1.g:540:2: ( rule__WorkSequence__SuccessorAssignment_3 )
             {
-             before(grammarAccess.getWorkSequenceAccess().getPredecessorAssignment_3()); 
-            // InternalPDL1.g:542:2: ( rule__WorkSequence__PredecessorAssignment_3 )
-            // InternalPDL1.g:542:3: rule__WorkSequence__PredecessorAssignment_3
+             before(grammarAccess.getWorkSequenceAccess().getSuccessorAssignment_3()); 
+            // InternalPDL1.g:541:2: ( rule__WorkSequence__SuccessorAssignment_3 )
+            // InternalPDL1.g:541:3: rule__WorkSequence__SuccessorAssignment_3
             {
             pushFollow(FOLLOW_2);
-            rule__WorkSequence__PredecessorAssignment_3();
+            rule__WorkSequence__SuccessorAssignment_3();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getWorkSequenceAccess().getPredecessorAssignment_3()); 
+             after(grammarAccess.getWorkSequenceAccess().getSuccessorAssignment_3()); 
 
             }
 
@@ -1641,172 +1644,17 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__WorkSequence__Group__3__Impl"
 
 
-    // $ANTLR start "rule__WorkSequence__Group__4"
-    // InternalPDL1.g:550:1: rule__WorkSequence__Group__4 : rule__WorkSequence__Group__4__Impl rule__WorkSequence__Group__5 ;
-    public final void rule__WorkSequence__Group__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalPDL1.g:554:1: ( rule__WorkSequence__Group__4__Impl rule__WorkSequence__Group__5 )
-            // InternalPDL1.g:555:2: rule__WorkSequence__Group__4__Impl rule__WorkSequence__Group__5
-            {
-            pushFollow(FOLLOW_3);
-            rule__WorkSequence__Group__4__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__WorkSequence__Group__5();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__WorkSequence__Group__4"
-
-
-    // $ANTLR start "rule__WorkSequence__Group__4__Impl"
-    // InternalPDL1.g:562:1: rule__WorkSequence__Group__4__Impl : ( 'to' ) ;
-    public final void rule__WorkSequence__Group__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalPDL1.g:566:1: ( ( 'to' ) )
-            // InternalPDL1.g:567:1: ( 'to' )
-            {
-            // InternalPDL1.g:567:1: ( 'to' )
-            // InternalPDL1.g:568:2: 'to'
-            {
-             before(grammarAccess.getWorkSequenceAccess().getToKeyword_4()); 
-            match(input,21,FOLLOW_2); 
-             after(grammarAccess.getWorkSequenceAccess().getToKeyword_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__WorkSequence__Group__4__Impl"
-
-
-    // $ANTLR start "rule__WorkSequence__Group__5"
-    // InternalPDL1.g:577:1: rule__WorkSequence__Group__5 : rule__WorkSequence__Group__5__Impl ;
-    public final void rule__WorkSequence__Group__5() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalPDL1.g:581:1: ( rule__WorkSequence__Group__5__Impl )
-            // InternalPDL1.g:582:2: rule__WorkSequence__Group__5__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__WorkSequence__Group__5__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__WorkSequence__Group__5"
-
-
-    // $ANTLR start "rule__WorkSequence__Group__5__Impl"
-    // InternalPDL1.g:588:1: rule__WorkSequence__Group__5__Impl : ( ( rule__WorkSequence__SuccessorAssignment_5 ) ) ;
-    public final void rule__WorkSequence__Group__5__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalPDL1.g:592:1: ( ( ( rule__WorkSequence__SuccessorAssignment_5 ) ) )
-            // InternalPDL1.g:593:1: ( ( rule__WorkSequence__SuccessorAssignment_5 ) )
-            {
-            // InternalPDL1.g:593:1: ( ( rule__WorkSequence__SuccessorAssignment_5 ) )
-            // InternalPDL1.g:594:2: ( rule__WorkSequence__SuccessorAssignment_5 )
-            {
-             before(grammarAccess.getWorkSequenceAccess().getSuccessorAssignment_5()); 
-            // InternalPDL1.g:595:2: ( rule__WorkSequence__SuccessorAssignment_5 )
-            // InternalPDL1.g:595:3: rule__WorkSequence__SuccessorAssignment_5
-            {
-            pushFollow(FOLLOW_2);
-            rule__WorkSequence__SuccessorAssignment_5();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getWorkSequenceAccess().getSuccessorAssignment_5()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__WorkSequence__Group__5__Impl"
-
-
     // $ANTLR start "rule__Guidance__Group__0"
-    // InternalPDL1.g:604:1: rule__Guidance__Group__0 : rule__Guidance__Group__0__Impl rule__Guidance__Group__1 ;
+    // InternalPDL1.g:550:1: rule__Guidance__Group__0 : rule__Guidance__Group__0__Impl rule__Guidance__Group__1 ;
     public final void rule__Guidance__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPDL1.g:608:1: ( rule__Guidance__Group__0__Impl rule__Guidance__Group__1 )
-            // InternalPDL1.g:609:2: rule__Guidance__Group__0__Impl rule__Guidance__Group__1
+            // InternalPDL1.g:554:1: ( rule__Guidance__Group__0__Impl rule__Guidance__Group__1 )
+            // InternalPDL1.g:555:2: rule__Guidance__Group__0__Impl rule__Guidance__Group__1
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_8);
             rule__Guidance__Group__0__Impl();
 
             state._fsp--;
@@ -1835,20 +1683,20 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Guidance__Group__0__Impl"
-    // InternalPDL1.g:616:1: rule__Guidance__Group__0__Impl : ( 'note' ) ;
+    // InternalPDL1.g:562:1: rule__Guidance__Group__0__Impl : ( 'note' ) ;
     public final void rule__Guidance__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPDL1.g:620:1: ( ( 'note' ) )
-            // InternalPDL1.g:621:1: ( 'note' )
+            // InternalPDL1.g:566:1: ( ( 'note' ) )
+            // InternalPDL1.g:567:1: ( 'note' )
             {
-            // InternalPDL1.g:621:1: ( 'note' )
-            // InternalPDL1.g:622:2: 'note'
+            // InternalPDL1.g:567:1: ( 'note' )
+            // InternalPDL1.g:568:2: 'note'
             {
              before(grammarAccess.getGuidanceAccess().getNoteKeyword_0()); 
-            match(input,22,FOLLOW_2); 
+            match(input,20,FOLLOW_2); 
              after(grammarAccess.getGuidanceAccess().getNoteKeyword_0()); 
 
             }
@@ -1872,14 +1720,14 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Guidance__Group__1"
-    // InternalPDL1.g:631:1: rule__Guidance__Group__1 : rule__Guidance__Group__1__Impl ;
+    // InternalPDL1.g:577:1: rule__Guidance__Group__1 : rule__Guidance__Group__1__Impl ;
     public final void rule__Guidance__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPDL1.g:635:1: ( rule__Guidance__Group__1__Impl )
-            // InternalPDL1.g:636:2: rule__Guidance__Group__1__Impl
+            // InternalPDL1.g:581:1: ( rule__Guidance__Group__1__Impl )
+            // InternalPDL1.g:582:2: rule__Guidance__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Guidance__Group__1__Impl();
@@ -1905,21 +1753,21 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Guidance__Group__1__Impl"
-    // InternalPDL1.g:642:1: rule__Guidance__Group__1__Impl : ( ( rule__Guidance__TextAssignment_1 ) ) ;
+    // InternalPDL1.g:588:1: rule__Guidance__Group__1__Impl : ( ( rule__Guidance__TextAssignment_1 ) ) ;
     public final void rule__Guidance__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPDL1.g:646:1: ( ( ( rule__Guidance__TextAssignment_1 ) ) )
-            // InternalPDL1.g:647:1: ( ( rule__Guidance__TextAssignment_1 ) )
+            // InternalPDL1.g:592:1: ( ( ( rule__Guidance__TextAssignment_1 ) ) )
+            // InternalPDL1.g:593:1: ( ( rule__Guidance__TextAssignment_1 ) )
             {
-            // InternalPDL1.g:647:1: ( ( rule__Guidance__TextAssignment_1 ) )
-            // InternalPDL1.g:648:2: ( rule__Guidance__TextAssignment_1 )
+            // InternalPDL1.g:593:1: ( ( rule__Guidance__TextAssignment_1 ) )
+            // InternalPDL1.g:594:2: ( rule__Guidance__TextAssignment_1 )
             {
              before(grammarAccess.getGuidanceAccess().getTextAssignment_1()); 
-            // InternalPDL1.g:649:2: ( rule__Guidance__TextAssignment_1 )
-            // InternalPDL1.g:649:3: rule__Guidance__TextAssignment_1
+            // InternalPDL1.g:595:2: ( rule__Guidance__TextAssignment_1 )
+            // InternalPDL1.g:595:3: rule__Guidance__TextAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Guidance__TextAssignment_1();
@@ -1952,17 +1800,17 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Process__NameAssignment_1"
-    // InternalPDL1.g:658:1: rule__Process__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalPDL1.g:604:1: rule__Process__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Process__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPDL1.g:662:1: ( ( RULE_ID ) )
-            // InternalPDL1.g:663:2: ( RULE_ID )
+            // InternalPDL1.g:608:1: ( ( RULE_ID ) )
+            // InternalPDL1.g:609:2: ( RULE_ID )
             {
-            // InternalPDL1.g:663:2: ( RULE_ID )
-            // InternalPDL1.g:664:3: RULE_ID
+            // InternalPDL1.g:609:2: ( RULE_ID )
+            // InternalPDL1.g:610:3: RULE_ID
             {
              before(grammarAccess.getProcessAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -1989,17 +1837,17 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Process__ProcessElementsAssignment_3"
-    // InternalPDL1.g:673:1: rule__Process__ProcessElementsAssignment_3 : ( ruleProcessElement ) ;
+    // InternalPDL1.g:619:1: rule__Process__ProcessElementsAssignment_3 : ( ruleProcessElement ) ;
     public final void rule__Process__ProcessElementsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPDL1.g:677:1: ( ( ruleProcessElement ) )
-            // InternalPDL1.g:678:2: ( ruleProcessElement )
+            // InternalPDL1.g:623:1: ( ( ruleProcessElement ) )
+            // InternalPDL1.g:624:2: ( ruleProcessElement )
             {
-            // InternalPDL1.g:678:2: ( ruleProcessElement )
-            // InternalPDL1.g:679:3: ruleProcessElement
+            // InternalPDL1.g:624:2: ( ruleProcessElement )
+            // InternalPDL1.g:625:3: ruleProcessElement
             {
              before(grammarAccess.getProcessAccess().getProcessElementsProcessElementParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -2030,17 +1878,17 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkDefinition__NameAssignment_1"
-    // InternalPDL1.g:688:1: rule__WorkDefinition__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalPDL1.g:634:1: rule__WorkDefinition__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__WorkDefinition__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPDL1.g:692:1: ( ( RULE_ID ) )
-            // InternalPDL1.g:693:2: ( RULE_ID )
+            // InternalPDL1.g:638:1: ( ( RULE_ID ) )
+            // InternalPDL1.g:639:2: ( RULE_ID )
             {
-            // InternalPDL1.g:693:2: ( RULE_ID )
-            // InternalPDL1.g:694:3: RULE_ID
+            // InternalPDL1.g:639:2: ( RULE_ID )
+            // InternalPDL1.g:640:3: RULE_ID
             {
              before(grammarAccess.getWorkDefinitionAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -2066,26 +1914,71 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__WorkDefinition__NameAssignment_1"
 
 
-    // $ANTLR start "rule__WorkSequence__LinkTypeAssignment_1"
-    // InternalPDL1.g:703:1: rule__WorkSequence__LinkTypeAssignment_1 : ( ruleWorkSequenceType ) ;
-    public final void rule__WorkSequence__LinkTypeAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__WorkSequence__PredecessorAssignment_1"
+    // InternalPDL1.g:649:1: rule__WorkSequence__PredecessorAssignment_1 : ( ( RULE_ID ) ) ;
+    public final void rule__WorkSequence__PredecessorAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPDL1.g:707:1: ( ( ruleWorkSequenceType ) )
-            // InternalPDL1.g:708:2: ( ruleWorkSequenceType )
+            // InternalPDL1.g:653:1: ( ( ( RULE_ID ) ) )
+            // InternalPDL1.g:654:2: ( ( RULE_ID ) )
             {
-            // InternalPDL1.g:708:2: ( ruleWorkSequenceType )
-            // InternalPDL1.g:709:3: ruleWorkSequenceType
+            // InternalPDL1.g:654:2: ( ( RULE_ID ) )
+            // InternalPDL1.g:655:3: ( RULE_ID )
             {
-             before(grammarAccess.getWorkSequenceAccess().getLinkTypeWorkSequenceTypeEnumRuleCall_1_0()); 
+             before(grammarAccess.getWorkSequenceAccess().getPredecessorWorkDefinitionCrossReference_1_0()); 
+            // InternalPDL1.g:656:3: ( RULE_ID )
+            // InternalPDL1.g:657:4: RULE_ID
+            {
+             before(grammarAccess.getWorkSequenceAccess().getPredecessorWorkDefinitionIDTerminalRuleCall_1_0_1()); 
+            match(input,RULE_ID,FOLLOW_2); 
+             after(grammarAccess.getWorkSequenceAccess().getPredecessorWorkDefinitionIDTerminalRuleCall_1_0_1()); 
+
+            }
+
+             after(grammarAccess.getWorkSequenceAccess().getPredecessorWorkDefinitionCrossReference_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__WorkSequence__PredecessorAssignment_1"
+
+
+    // $ANTLR start "rule__WorkSequence__LinkTypeAssignment_2"
+    // InternalPDL1.g:668:1: rule__WorkSequence__LinkTypeAssignment_2 : ( ruleWorkSequenceType ) ;
+    public final void rule__WorkSequence__LinkTypeAssignment_2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPDL1.g:672:1: ( ( ruleWorkSequenceType ) )
+            // InternalPDL1.g:673:2: ( ruleWorkSequenceType )
+            {
+            // InternalPDL1.g:673:2: ( ruleWorkSequenceType )
+            // InternalPDL1.g:674:3: ruleWorkSequenceType
+            {
+             before(grammarAccess.getWorkSequenceAccess().getLinkTypeWorkSequenceTypeEnumRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
             ruleWorkSequenceType();
 
             state._fsp--;
 
-             after(grammarAccess.getWorkSequenceAccess().getLinkTypeWorkSequenceTypeEnumRuleCall_1_0()); 
+             after(grammarAccess.getWorkSequenceAccess().getLinkTypeWorkSequenceTypeEnumRuleCall_2_0()); 
 
             }
 
@@ -2104,33 +1997,33 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__WorkSequence__LinkTypeAssignment_1"
+    // $ANTLR end "rule__WorkSequence__LinkTypeAssignment_2"
 
 
-    // $ANTLR start "rule__WorkSequence__PredecessorAssignment_3"
-    // InternalPDL1.g:718:1: rule__WorkSequence__PredecessorAssignment_3 : ( ( RULE_ID ) ) ;
-    public final void rule__WorkSequence__PredecessorAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__WorkSequence__SuccessorAssignment_3"
+    // InternalPDL1.g:683:1: rule__WorkSequence__SuccessorAssignment_3 : ( ( RULE_ID ) ) ;
+    public final void rule__WorkSequence__SuccessorAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPDL1.g:722:1: ( ( ( RULE_ID ) ) )
-            // InternalPDL1.g:723:2: ( ( RULE_ID ) )
+            // InternalPDL1.g:687:1: ( ( ( RULE_ID ) ) )
+            // InternalPDL1.g:688:2: ( ( RULE_ID ) )
             {
-            // InternalPDL1.g:723:2: ( ( RULE_ID ) )
-            // InternalPDL1.g:724:3: ( RULE_ID )
+            // InternalPDL1.g:688:2: ( ( RULE_ID ) )
+            // InternalPDL1.g:689:3: ( RULE_ID )
             {
-             before(grammarAccess.getWorkSequenceAccess().getPredecessorWorkDefinitionCrossReference_3_0()); 
-            // InternalPDL1.g:725:3: ( RULE_ID )
-            // InternalPDL1.g:726:4: RULE_ID
+             before(grammarAccess.getWorkSequenceAccess().getSuccessorWorkDefinitionCrossReference_3_0()); 
+            // InternalPDL1.g:690:3: ( RULE_ID )
+            // InternalPDL1.g:691:4: RULE_ID
             {
-             before(grammarAccess.getWorkSequenceAccess().getPredecessorWorkDefinitionIDTerminalRuleCall_3_0_1()); 
+             before(grammarAccess.getWorkSequenceAccess().getSuccessorWorkDefinitionIDTerminalRuleCall_3_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getWorkSequenceAccess().getPredecessorWorkDefinitionIDTerminalRuleCall_3_0_1()); 
+             after(grammarAccess.getWorkSequenceAccess().getSuccessorWorkDefinitionIDTerminalRuleCall_3_0_1()); 
 
             }
 
-             after(grammarAccess.getWorkSequenceAccess().getPredecessorWorkDefinitionCrossReference_3_0()); 
+             after(grammarAccess.getWorkSequenceAccess().getSuccessorWorkDefinitionCrossReference_3_0()); 
 
             }
 
@@ -2149,66 +2042,21 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__WorkSequence__PredecessorAssignment_3"
-
-
-    // $ANTLR start "rule__WorkSequence__SuccessorAssignment_5"
-    // InternalPDL1.g:737:1: rule__WorkSequence__SuccessorAssignment_5 : ( ( RULE_ID ) ) ;
-    public final void rule__WorkSequence__SuccessorAssignment_5() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalPDL1.g:741:1: ( ( ( RULE_ID ) ) )
-            // InternalPDL1.g:742:2: ( ( RULE_ID ) )
-            {
-            // InternalPDL1.g:742:2: ( ( RULE_ID ) )
-            // InternalPDL1.g:743:3: ( RULE_ID )
-            {
-             before(grammarAccess.getWorkSequenceAccess().getSuccessorWorkDefinitionCrossReference_5_0()); 
-            // InternalPDL1.g:744:3: ( RULE_ID )
-            // InternalPDL1.g:745:4: RULE_ID
-            {
-             before(grammarAccess.getWorkSequenceAccess().getSuccessorWorkDefinitionIDTerminalRuleCall_5_0_1()); 
-            match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getWorkSequenceAccess().getSuccessorWorkDefinitionIDTerminalRuleCall_5_0_1()); 
-
-            }
-
-             after(grammarAccess.getWorkSequenceAccess().getSuccessorWorkDefinitionCrossReference_5_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__WorkSequence__SuccessorAssignment_5"
+    // $ANTLR end "rule__WorkSequence__SuccessorAssignment_3"
 
 
     // $ANTLR start "rule__Guidance__TextAssignment_1"
-    // InternalPDL1.g:756:1: rule__Guidance__TextAssignment_1 : ( RULE_STRING ) ;
+    // InternalPDL1.g:702:1: rule__Guidance__TextAssignment_1 : ( RULE_STRING ) ;
     public final void rule__Guidance__TextAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPDL1.g:760:1: ( ( RULE_STRING ) )
-            // InternalPDL1.g:761:2: ( RULE_STRING )
+            // InternalPDL1.g:706:1: ( ( RULE_STRING ) )
+            // InternalPDL1.g:707:2: ( RULE_STRING )
             {
-            // InternalPDL1.g:761:2: ( RULE_STRING )
-            // InternalPDL1.g:762:3: RULE_STRING
+            // InternalPDL1.g:707:2: ( RULE_STRING )
+            // InternalPDL1.g:708:3: RULE_STRING
             {
              before(grammarAccess.getGuidanceAccess().getTextSTRINGTerminalRuleCall_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -2242,11 +2090,9 @@ public class InternalPDL1Parser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x00000000004E0000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x00000000004C0002L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x00000000001E0000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x00000000001C0002L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000007800L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000020L});
 
 }

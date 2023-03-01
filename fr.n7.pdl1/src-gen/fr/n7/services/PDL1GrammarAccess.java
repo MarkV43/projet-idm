@@ -115,59 +115,53 @@ public class PDL1GrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.PDL1.WorkSequence");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cWsKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cLinkTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cLinkTypeWorkSequenceTypeEnumRuleCall_1_0 = (RuleCall)cLinkTypeAssignment_1.eContents().get(0);
-		private final Keyword cFromKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cPredecessorAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cPredecessorWorkDefinitionCrossReference_3_0 = (CrossReference)cPredecessorAssignment_3.eContents().get(0);
-		private final RuleCall cPredecessorWorkDefinitionIDTerminalRuleCall_3_0_1 = (RuleCall)cPredecessorWorkDefinitionCrossReference_3_0.eContents().get(1);
-		private final Keyword cToKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cSuccessorAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final CrossReference cSuccessorWorkDefinitionCrossReference_5_0 = (CrossReference)cSuccessorAssignment_5.eContents().get(0);
-		private final RuleCall cSuccessorWorkDefinitionIDTerminalRuleCall_5_0_1 = (RuleCall)cSuccessorWorkDefinitionCrossReference_5_0.eContents().get(1);
+		private final Assignment cPredecessorAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cPredecessorWorkDefinitionCrossReference_1_0 = (CrossReference)cPredecessorAssignment_1.eContents().get(0);
+		private final RuleCall cPredecessorWorkDefinitionIDTerminalRuleCall_1_0_1 = (RuleCall)cPredecessorWorkDefinitionCrossReference_1_0.eContents().get(1);
+		private final Assignment cLinkTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cLinkTypeWorkSequenceTypeEnumRuleCall_2_0 = (RuleCall)cLinkTypeAssignment_2.eContents().get(0);
+		private final Assignment cSuccessorAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final CrossReference cSuccessorWorkDefinitionCrossReference_3_0 = (CrossReference)cSuccessorAssignment_3.eContents().get(0);
+		private final RuleCall cSuccessorWorkDefinitionIDTerminalRuleCall_3_0_1 = (RuleCall)cSuccessorWorkDefinitionCrossReference_3_0.eContents().get(1);
 		
-		//WorkSequence : 'ws' linkType=WorkSequenceType
-		//    'from' predecessor=[WorkDefinition]
-		//    'to' successor=[WorkDefinition] ;
+		//WorkSequence : 'ws'
+		//    predecessor=[WorkDefinition]
+		//    linkType=WorkSequenceType
+		//    successor=[WorkDefinition] ;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'ws' linkType=WorkSequenceType
-		//   'from' predecessor=[WorkDefinition]
-		//   'to' successor=[WorkDefinition]
+		//'ws'
+		//   predecessor=[WorkDefinition]
+		//   linkType=WorkSequenceType
+		//   successor=[WorkDefinition]
 		public Group getGroup() { return cGroup; }
 		
 		//'ws'
 		public Keyword getWsKeyword_0() { return cWsKeyword_0; }
 		
+		//predecessor=[WorkDefinition]
+		public Assignment getPredecessorAssignment_1() { return cPredecessorAssignment_1; }
+		
+		//[WorkDefinition]
+		public CrossReference getPredecessorWorkDefinitionCrossReference_1_0() { return cPredecessorWorkDefinitionCrossReference_1_0; }
+		
+		//ID
+		public RuleCall getPredecessorWorkDefinitionIDTerminalRuleCall_1_0_1() { return cPredecessorWorkDefinitionIDTerminalRuleCall_1_0_1; }
+		
 		//linkType=WorkSequenceType
-		public Assignment getLinkTypeAssignment_1() { return cLinkTypeAssignment_1; }
+		public Assignment getLinkTypeAssignment_2() { return cLinkTypeAssignment_2; }
 		
 		//WorkSequenceType
-		public RuleCall getLinkTypeWorkSequenceTypeEnumRuleCall_1_0() { return cLinkTypeWorkSequenceTypeEnumRuleCall_1_0; }
-		
-		//'from'
-		public Keyword getFromKeyword_2() { return cFromKeyword_2; }
-		
-		//predecessor=[WorkDefinition]
-		public Assignment getPredecessorAssignment_3() { return cPredecessorAssignment_3; }
-		
-		//[WorkDefinition]
-		public CrossReference getPredecessorWorkDefinitionCrossReference_3_0() { return cPredecessorWorkDefinitionCrossReference_3_0; }
-		
-		//ID
-		public RuleCall getPredecessorWorkDefinitionIDTerminalRuleCall_3_0_1() { return cPredecessorWorkDefinitionIDTerminalRuleCall_3_0_1; }
-		
-		//'to'
-		public Keyword getToKeyword_4() { return cToKeyword_4; }
+		public RuleCall getLinkTypeWorkSequenceTypeEnumRuleCall_2_0() { return cLinkTypeWorkSequenceTypeEnumRuleCall_2_0; }
 		
 		//successor=[WorkDefinition]
-		public Assignment getSuccessorAssignment_5() { return cSuccessorAssignment_5; }
+		public Assignment getSuccessorAssignment_3() { return cSuccessorAssignment_3; }
 		
 		//[WorkDefinition]
-		public CrossReference getSuccessorWorkDefinitionCrossReference_5_0() { return cSuccessorWorkDefinitionCrossReference_5_0; }
+		public CrossReference getSuccessorWorkDefinitionCrossReference_3_0() { return cSuccessorWorkDefinitionCrossReference_3_0; }
 		
 		//ID
-		public RuleCall getSuccessorWorkDefinitionIDTerminalRuleCall_5_0_1() { return cSuccessorWorkDefinitionIDTerminalRuleCall_5_0_1; }
+		public RuleCall getSuccessorWorkDefinitionIDTerminalRuleCall_3_0_1() { return cSuccessorWorkDefinitionIDTerminalRuleCall_3_0_1; }
 	}
 	public class GuidanceElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.n7.PDL1.Guidance");
@@ -321,9 +315,10 @@ public class PDL1GrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		return getWorkDefinitionAccess().getRule();
 	}
 	
-	//WorkSequence : 'ws' linkType=WorkSequenceType
-	//    'from' predecessor=[WorkDefinition]
-	//    'to' successor=[WorkDefinition] ;
+	//WorkSequence : 'ws'
+	//    predecessor=[WorkDefinition]
+	//    linkType=WorkSequenceType
+	//    successor=[WorkDefinition] ;
 	public WorkSequenceElements getWorkSequenceAccess() {
 		return pWorkSequence;
 	}

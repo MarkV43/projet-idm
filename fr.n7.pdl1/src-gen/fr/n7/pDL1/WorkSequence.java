@@ -13,8 +13,8 @@ package fr.n7.pDL1;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.n7.pDL1.WorkSequence#getLinkType <em>Link Type</em>}</li>
  *   <li>{@link fr.n7.pDL1.WorkSequence#getPredecessor <em>Predecessor</em>}</li>
+ *   <li>{@link fr.n7.pDL1.WorkSequence#getLinkType <em>Link Type</em>}</li>
  *   <li>{@link fr.n7.pDL1.WorkSequence#getSuccessor <em>Successor</em>}</li>
  * </ul>
  *
@@ -24,6 +24,28 @@ package fr.n7.pDL1;
  */
 public interface WorkSequence extends ProcessElement
 {
+  /**
+   * Returns the value of the '<em><b>Predecessor</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Predecessor</em>' reference.
+   * @see #setPredecessor(WorkDefinition)
+   * @see fr.n7.pDL1.PDL1Package#getWorkSequence_Predecessor()
+   * @model
+   * @generated
+   */
+  WorkDefinition getPredecessor();
+
+  /**
+   * Sets the value of the '{@link fr.n7.pDL1.WorkSequence#getPredecessor <em>Predecessor</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Predecessor</em>' reference.
+   * @see #getPredecessor()
+   * @generated
+   */
+  void setPredecessor(WorkDefinition value);
+
   /**
    * Returns the value of the '<em><b>Link Type</b></em>' attribute.
    * The literals are from the enumeration {@link fr.n7.pDL1.WorkSequenceType}.
@@ -48,28 +70,6 @@ public interface WorkSequence extends ProcessElement
    * @generated
    */
   void setLinkType(WorkSequenceType value);
-
-  /**
-   * Returns the value of the '<em><b>Predecessor</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Predecessor</em>' reference.
-   * @see #setPredecessor(WorkDefinition)
-   * @see fr.n7.pDL1.PDL1Package#getWorkSequence_Predecessor()
-   * @model
-   * @generated
-   */
-  WorkDefinition getPredecessor();
-
-  /**
-   * Sets the value of the '{@link fr.n7.pDL1.WorkSequence#getPredecessor <em>Predecessor</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Predecessor</em>' reference.
-   * @see #getPredecessor()
-   * @generated
-   */
-  void setPredecessor(WorkDefinition value);
 
   /**
    * Returns the value of the '<em><b>Successor</b></em>' reference.

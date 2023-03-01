@@ -214,9 +214,9 @@ public class PDL1PackageImpl extends EPackageImpl implements PDL1Package
    * @generated
    */
   @Override
-  public EAttribute getWorkSequence_LinkType()
+  public EReference getWorkSequence_Predecessor()
   {
-    return (EAttribute)workSequenceEClass.getEStructuralFeatures().get(0);
+    return (EReference)workSequenceEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -225,9 +225,9 @@ public class PDL1PackageImpl extends EPackageImpl implements PDL1Package
    * @generated
    */
   @Override
-  public EReference getWorkSequence_Predecessor()
+  public EAttribute getWorkSequence_LinkType()
   {
-    return (EReference)workSequenceEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)workSequenceEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -315,8 +315,8 @@ public class PDL1PackageImpl extends EPackageImpl implements PDL1Package
     createEAttribute(workDefinitionEClass, WORK_DEFINITION__NAME);
 
     workSequenceEClass = createEClass(WORK_SEQUENCE);
-    createEAttribute(workSequenceEClass, WORK_SEQUENCE__LINK_TYPE);
     createEReference(workSequenceEClass, WORK_SEQUENCE__PREDECESSOR);
+    createEAttribute(workSequenceEClass, WORK_SEQUENCE__LINK_TYPE);
     createEReference(workSequenceEClass, WORK_SEQUENCE__SUCCESSOR);
 
     guidanceEClass = createEClass(GUIDANCE);
@@ -370,8 +370,8 @@ public class PDL1PackageImpl extends EPackageImpl implements PDL1Package
     initEAttribute(getWorkDefinition_Name(), ecorePackage.getEString(), "name", null, 0, 1, WorkDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(workSequenceEClass, WorkSequence.class, "WorkSequence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getWorkSequence_LinkType(), this.getWorkSequenceType(), "linkType", null, 0, 1, WorkSequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getWorkSequence_Predecessor(), this.getWorkDefinition(), null, "predecessor", null, 0, 1, WorkSequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getWorkSequence_LinkType(), this.getWorkSequenceType(), "linkType", null, 0, 1, WorkSequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getWorkSequence_Successor(), this.getWorkDefinition(), null, "successor", null, 0, 1, WorkSequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(guidanceEClass, Guidance.class, "Guidance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
